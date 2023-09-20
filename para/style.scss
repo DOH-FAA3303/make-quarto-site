@@ -40,6 +40,27 @@ $font-family-sans-serif: Inter, Helvetica, sans-serif;
   }
 }
 
+// dark slide light header
+.color-slide h2 {
+ color: $theme-white;
+}
+
+// dark slide move the title to center
+.color-slide2, 
+.color-slide2 h2 {
+ color: $theme-white;
+ position: absolute;
+ text-align: center;
+ top: 25%;
+ width: 100%;
+ left: 0;
+ line-height: 100px;
+ margin-top: -50px;
+ 
+}
+
+
+
 .myframe {
   /*box-shadow: $back-blue 10px 5px 5px 0px;*/
   border: none;

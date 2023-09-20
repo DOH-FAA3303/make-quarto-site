@@ -15,13 +15,13 @@ knitr: true
 echo: true
 ---
 
-# github pages
+# github pages ☕
 
 by frankthetank
 
 ## 
 
-![dplyr's gh-page](ghpage.PNG){.myframe2 width="300"}
+![](ghpage.PNG){.myframe2 width="300"}
 
 ## examples
 
@@ -52,11 +52,12 @@ by frankthetank
 :::
 :::
 
-## files
+## 
 
 ::: columns
 ::: {.column width="50%"}
 ::: {.codewindow width="500px"}
+folder tree
 ```{sass eval=FALSE}
 #| code-line-numbers: false
 .
@@ -71,7 +72,7 @@ by frankthetank
 :::
 :::
 
-::: {.column width="50%"}
+::: {.fragment .fade-in .column width="50%"}
 -   `_quarto.yml` yaml for all documents
 -   `about.qmd` example `qmd` file
 -   `index.qmd` main document, [keep this]{.dark-blue}
@@ -108,12 +109,11 @@ This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-
 ```
 :::
 :::
 
-::: {.column width="50%"}
+::: {.fragment .fade-in .column width="50%"}
 ::: codewindow
 \_quarto.yml
 
@@ -151,11 +151,10 @@ editor: visual
 
 ::: {layout-ncol="2"}
 ::: window-style
-```{scss}
-#| code-line-numbers: "|6-10|11-12|13-14"
+```{scss filename="folder tree"}
+#| code-line-numbers: "|5-9|10-11|12-13"
 #| eval: false
 #| classes: myframe
-folder tree
 .
 ├── _quarto.yml
 ├── about.qmd
@@ -177,10 +176,10 @@ folder tree
 :::
 
 ::: window-style
-```{scss eval=FALSE}
-#| code-line-numbers: "7-26"
+```{scss filename="_quarto.yml"}
+#| code-line-numbers: "6-25"
 #| classes: myframe
-_quarto.yml
+#| eval: false
 project:
   type: website
 
@@ -219,7 +218,7 @@ editor: visual
 :::
 :::
 
-## nav bar results
+## nav bar results {.color-slide}
 
 ```{=html}
 <iframe width="1600" height="600" src="https://edenian-prince.github.io/quarto-site/" title="Quarto Documentation" class="myframe2"></iframe>
@@ -237,7 +236,7 @@ editor: visual
 ```
 :::
 
-## link external code to documentation
+## link external code to documentation {.color-slide}
 
 ::: {layout-ncol="2"}
 ::: {.codewindow .r width="500px"}
@@ -271,7 +270,7 @@ library(magrittr)
 ```
 :::
 
-::: {.codewindow width="500px"}
+::: {.fragment .fade-in .codewindow .quarto width="500px"}
 scripts/script.qmd
 
 ```` markdown
@@ -283,22 +282,30 @@ scripts/script.qmd
 
 ```
 
+```{{r}}
+{< include external_script.R read-chunk >}
+```
 ````
 :::
 :::
 
-## publish
+## publish {.color-slide}
 
-:::{layout-ncol="2"}
+::: {layout-ncol="2"}
 
 ![](publish.gif){.myframe2}
+
+
+:::{.fragment .fade-in}
 
 ![](ghpage2.png){.myframe2}
 
 :::
-## github actions - let's automate 🍕{.absolute top=5}
+:::
 
-## github actions
+## github actions - let's automate 🍕 {.color-slide2}
+
+## github actions {.color-slide}
 
 ::: {layout-ncol="2"}
 ::: {.codewindow .sass width="700px"}
@@ -335,14 +342,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
 :::
 
+:::{.fragment .fade-in}
 ![](ghaction.PNG){.myframe width="1000"}
+:::
 :::
 
 ## scss/css/sass {background-color="aquamarine"}
 
-::: {.codewindow .sass width="500px"}
+::: {.codewindow .sass width="600px"}
 styles.scss
 
 ```{sass eval=FALSE}
@@ -383,35 +393,24 @@ $light-back : #bdcad4;
 
 ## html {background-color="aquamarine"}
 
-```{r}
+```{html}
 #| eval: false
 #| echo: fenced
-<iframe width="500" height="500" src="https://pola-rs.github.io/polars-book/user-guide/" title="Quarto Documentation" class="myframe"></iframe>
+<div align="center"><iframe width="500" height="500" src="https://pola-rs.github.io/polars-book/user-guide/" title="Quarto Documentation" class="myframe"></iframe></div>
 ```
 
 ```{=html}
-<iframe width="600" height="500" src="https://pola-rs.github.io/polars-book/user-guide/" title="Quarto Documentation" class="myframe2"></iframe>
+<div align="center"><iframe width="600" height="500" src="https://pola-rs.github.io/polars-book/user-guide/" title="Quarto Documentation" class="myframe2"></iframe></div>
 ```
-
-
 ## js {background-color="aquamarine"}
 
-[three.js](https://threejs.org/)
-[visual_cinnamon](https://www.visualcinnamon.com/)
-[nytimes](https://www.nytimes.com/interactive/2020/04/14/science/coronavirus-transmission-cough-6-feet-ar-ul.html)
+[three.js](https://threejs.org/) [visual_cinnamon](https://www.visualcinnamon.com/) [nytimes](https://www.nytimes.com/interactive/2020/04/14/science/coronavirus-transmission-cough-6-feet-ar-ul.html)
 
-:::{layout-ncol="2"}
-
-
-
+::: {layout-ncol="2"}
 ```{=html}
 <iframe width="500" height="500" src="https://threejs.org/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
-
-
 ```{=html}
 <iframe width="500" height="500" src="https://www.visualcinnamon.com/" title="d3js" class="myframe2"></iframe>
 ```
-
-
 :::
